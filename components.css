@@ -1103,6 +1103,10 @@
   padding-bottom: 2rem;
   transition: transform 0.3s ease;
 }
+[data-theme="dark"] .consult_card {
+  background-color: #1e293b; /* dark slate */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
 
 .consult_card:hover {
   transform: translateY(-8px);
@@ -1158,7 +1162,7 @@
   }
 }
 
-[data-theme="dark"] .consultation_section, .consultation_card {
+[data-theme="dark"] .consultation_section {
   background-color: #1e293b; /* dark slate */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
