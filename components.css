@@ -1698,26 +1698,18 @@
   color: var(--text-primary);
 }
 
+/* FAQ Grid */
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  align-items: flex-start; 
 }
-
-.faq-column {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-
 
 /* FAQ Item */
 .faq-item {
   height: fit-content; 
-  display: flex;
-  gap: 24px;
-  align-items: flex-start; 
+  align-self: start; 
   background-color: var(--bg-primary);
   border-radius: 14px;
   border: 1px solid var(--border-color);
