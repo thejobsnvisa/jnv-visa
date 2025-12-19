@@ -1737,16 +1737,14 @@
 .faq-icon {
   width: 32px;
   height: 32px;
+  min-width: 32px; /* 🔴 IMPORTANT */
   border-radius: 50%;
   background-color: #eafaf1;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-  transition: 
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    font-size 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Answer */
@@ -1771,8 +1769,7 @@
 }
 
 .faq-item.active .faq-icon {
-  transform: rotate(90deg);
-  font-size: 1.6rem; /* auto size increase */
+  transform: rotate(90deg) scale(1.2); /* ✅ scale instead */
   background-color: var(--primary-green);
   color: #fff;
 }
