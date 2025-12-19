@@ -1706,9 +1706,14 @@
   align-items: flex-start; 
 }
 
+
+
 /* FAQ Item */
 .faq-item {
   height: fit-content; 
+  display: flex;
+  gap: 24px;
+  align-items: flex-start; 
   background-color: var(--bg-primary);
   border-radius: 14px;
   border: 1px solid var(--border-color);
