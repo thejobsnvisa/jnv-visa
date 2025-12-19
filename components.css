@@ -1138,7 +1138,7 @@
 }
 
 .consult_card .btn {
-  width: 100%;
+  width: 60%;
   background-color: var(--primary-green);
   color: var(--white);
   border: none;
