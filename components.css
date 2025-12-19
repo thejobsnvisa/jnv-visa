@@ -1138,10 +1138,10 @@
 }
 
 [data-theme="dark"] .consultation_card p{
-  color: #555;
+  color:white;
 }
 [data-theme="dark"] .consultation_card {
-  color: #555;
+  color: white;
 }
 
 .consult_card .btn {
