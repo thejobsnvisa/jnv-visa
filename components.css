@@ -1703,12 +1703,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  align-items: start; /* 🔥 THIS FIXES EVERYTHING */
 }
 
 /* FAQ Item */
 .faq-item {
-  height: fit-content;
   background-color: var(--bg-primary);
   border-radius: 14px;
   border: 1px solid var(--border-color);
@@ -1730,23 +1728,22 @@
   font-weight: 600;
   color: var(--text-primary);
   display: flex;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  gap: 1rem;
 }
 
 /* Arrow Icon */
 .faq-icon {
   width: 32px;
   height: 32px;
-  min-width: 32px;        /* 🔒 layout lock */
   border-radius: 50%;
   background-color: #eafaf1;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease, background 0.3s;
 }
 
 /* Answer */
@@ -1761,22 +1758,20 @@
   margin: 0;
   padding-bottom: 1rem;
   color: var(--text-secondary);
-  line-height: 1.6;
 }
 
 /* Active State */
 .faq-item.active .faq-answer {
-  max-height: 400px; /* supports longer content */
+  max-height: 200px;
   padding-top: 0.5rem;
 }
 
 .faq-item.active .faq-icon {
-  transform: rotate(90deg) scale(1.15); /* ✅ scale instead */
+  transform: rotate(90deg);
   background-color: var(--primary-green);
   color: #fff;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .faq-grid {
     grid-template-columns: 1fr;
@@ -1787,19 +1782,9 @@
   }
 }
 
-/* Dark Theme */
-[data-theme="dark"] .faq-item {
-  background-color: var(--bg-primary);
-}
-
 [data-theme="dark"] .faq-icon {
-  background-color: #2d3748;
+  background-color: white;
   color: #a0aec0;
-}
-
-[data-theme="dark"] .faq-item.active .faq-icon {
-  background-color: var(--primary-green);
-  color: #ffffff;
 }
 
 
