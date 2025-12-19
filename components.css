@@ -1137,8 +1137,8 @@
   margin: 1rem 0 1.5rem;
 }
 
-[data-theme="dark"] .consult_card p,
-[data-theme="dark"] .consult_card h4{
+[data-theme="dark"] .consult_card h4,
+[data-theme="dark"] .consult_card p {
   color: #ffffff;
 }
 
