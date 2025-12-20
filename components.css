@@ -1740,7 +1740,7 @@ max-width: 1200px; margin: auto; padding: 3rem 1rem;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: #eafaf1;
+  background-color:var(--primary-green-light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1764,6 +1764,7 @@ max-width: 1200px; margin: auto; padding: 3rem 1rem;
 
 .faq-item.active .faq-icon {
   transform: rotate(90deg);
+  color: var(--primary-green);
 }
 
 [data-theme="dark"] .faq-question {
