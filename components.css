@@ -1849,10 +1849,18 @@ max-width: 1200px; margin: auto; padding: 3rem 1rem;
 }
 
 .user-card ul li {
-  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 0.6rem;
   font-size: 0.95rem;
+  color: var(--text-secondary);
 }
 
+.user-card ul li span {
+  text-align: justify;
+  line-height: 1.5;
+}
 /* Buttons */
  .user-card .primary-btn {
   width: 45%;
