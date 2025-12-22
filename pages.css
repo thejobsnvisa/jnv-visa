@@ -169,8 +169,8 @@
 }
 
 .category-icon {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
   border-radius: var(--radius-md);
   display: flex;
@@ -180,7 +180,8 @@
 }
 
 .category-icon i {
-  font-size: var(--font-size-2xl);
+  height: 42px;
+  font-size: var(--font-size-xl);
   color: var(--white);
 }
 
