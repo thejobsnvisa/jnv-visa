@@ -347,6 +347,32 @@ function debounce(func, wait) {
       item.classList.toggle("active");
     });
   });
+// client tentimonials silder 
+const track = document.querySelector(".testimonial-track");
+  const slides = document.querySelectorAll(".section_card");
+  const nextBtn = document.getElementById("next");
+  const prevBtn = document.getElementById("prev");
 
+  let index = 0;
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    updateSlider();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlider();
+  });
+
+  // Auto slide (optional)
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    updateSlider();
+  }, 5000);
 // Apply debouncing to scroll-heavy functions
 window.addEventListener('scroll', debounce(updateActiveNavLink, 10));
