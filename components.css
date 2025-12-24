@@ -656,7 +656,10 @@
   padding: var(--spacing-3xl) 0;
   background-color: #f9f9f9;
 }
-
+[data-theme="dark"] .industries {
+  background-color: #1e293b; /* dark slate */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
 .industries-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
