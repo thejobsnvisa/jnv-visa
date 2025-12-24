@@ -654,6 +654,7 @@
 /* Industries Section */
 .industries {
   padding: var(--spacing-3xl) 0;
+  background-color: #f9f9f9;
 }
 
 .industries-grid {
@@ -1782,7 +1783,6 @@ max-width: 1200px; margin: auto; padding: 3rem 1rem;
 /* jobseeker and employer  */
 .user-section {
   padding: 4rem 1rem;
-  background-color: var(--bg-secondary);
 }
 
 .section-title {
