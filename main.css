@@ -170,7 +170,7 @@ a:hover {
 .overview-btn {
   display: block;
   width: fit-content;
-  gap: 16px;
+  gap: 10px;
   margin: auto;
   padding: 8px 16px;
   align-items: center;
@@ -181,11 +181,11 @@ a:hover {
   );
   color: #ffffff;
   height: 50px;
-  font-weight: 600;
-  border-radius: 12px;
+  font-weight: 500;
+  border-radius: 7px;
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* Hover effect */
