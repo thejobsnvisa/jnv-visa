@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthcare Practitioner Migration to Australia | JobsNvisa</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="health.css" />
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#home">
+          <img src="dark.svg" width="300" height="auto" alt="JobsNVisa Logo" class="logo-image" />
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="whyus.html" class="nav-link">Why Us</a></li>
+        <li><a href="health.html" class="nav-link">Healthcare</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="knowmore.html" class="nav-link">Know more</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>
+        Healthcare Practitioners <br>
+        <span>Migration to Australia</span>
+      </h1>
+      <p>
+        Australia offers exceptional opportunities for skilled healthcare
+        professionals seeking global exposure, career growth, and permanent
+        residency pathways.
+      </p>
+      <button class="btn btn-primary btn-cta" id="postJobBtn">
+            <i class="fas fa-briefcase"></i>
+            Get Started
+          </button>
+    </div>
+
+    <div>
+      <img src="assets/hospital-au.jpg" alt="Healthcare professionals in Australia">
+    </div>
+  </div>
+</section>
+
+<!-- WHO CAN APPLY -->
+<section class="container" style="max-width: 1200px; margin: 0 auto; padding: 60px 0;">
+    <h2>Who Can Apply?</h2>
+
+    <div class="grid">
+        <div class="card">
+            <img src="assets/doctor-au.jpg" alt="Doctors in Australia">
+            <h3>Doctors & Specialists</h3>
+            <ul>
+                <li><i class="ri-check-line"></i> General Practitioners</li>
+                <li><i class="ri-check-line"></i> Medical Specialists</li>
+                <li><i class="ri-check-line"></i> Surgeons & Consultants</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <img src="assets/nurse-au.jpg" alt="Nurses in Australia">
+            <h3>Nurses & Midwives</h3>
+            <ul>
+                <li><i class="ri-check-line"></i> Registered Nurses</li>
+                <li><i class="ri-check-line"></i> Aged Care Nurses</li>
+                <li><i class="ri-check-line"></i> Community Care Staff</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <img src="assets/hero-healthcare-au.jpg" alt="Australian hospital">
+            <h3>Allied Health</h3>
+            <ul>
+                <li><i class="ri-check-line"></i> Physiotherapists</li>
+                <li><i class="ri-check-line"></i> Lab & Imaging Professionals</li>
+                <li><i class="ri-check-line"></i> Healthcare Technicians</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- HEALTHCARE BENEFITS GRID -->
+<section class="health-grid">
+  <div class="container">
+    <h2>Why Healthcare Professionals Choose Australia</h2>
+
+    <div class="health-features">
+      <div class="health-item">
+        <i class="fas fa-user-md"></i>
+        <h4>High Demand</h4>
+        <p>Ongoing shortages across hospitals, clinics, and aged care.</p>
+      </div>
+
+      <div class="health-item">
+        <i class="fas fa-hand-holding-medical"></i>
+        <h4>Strong Salaries</h4>
+        <p>Competitive pay with overtime, leave, and superannuation.</p>
+      </div>
+
+      <div class="health-item">
+        <i class="fas fa-passport"></i>
+        <h4>PR Pathways</h4>
+        <p>Clear permanent residency options for healthcare roles.</p>
+      </div>
+
+      <div class="health-item">
+        <i class="fas fa-clock"></i>
+        <h4>Work–Life Balance</h4>
+        <p>Flexible shifts and regulated working hours.</p>
+      </div>
+
+      <div class="health-item">
+        <i class="fas fa-hospital"></i>
+        <h4>Modern Facilities</h4>
+        <p>World-class hospitals and advanced medical technology.</p>
+      </div>
+
+      <div class="health-item">
+        <i class="fas fa-globe"></i>
+        <h4>Quality of Life</h4>
+        <p>Safe cities, education, and multicultural environment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Post Job Modal -->
+  <div class="modal" id="postJobModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Post a Job</h2>
+        <button class="modal-close" id="closePostJobModal" title="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Find the perfect candidates for your organization through our
+          extensive network
+        </p>
+        <form class="job-form" id="postJobForm" name="submit-to-google-sheet">
+          <div class="form-group">
+            <input type="text" id="companyName" name="company" required />
+            <label for="companyName">Company Name</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="jobTitle" name="title" required />
+            <label for="jobTitle">Job Title</label>
+          </div>
+          <div class="form-group">
+            <textarea id="jobDescription" name="description" rows="4" required></textarea>
+            <label for="jobDescription">Job Description</label>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="tel" id="companyPhone" name="phone" required />
+              <label for="companyPhone">Contact Number</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="companyEmail" name="email" required />
+              <label for="companyEmail">Email Address</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <select id="jobIndustry" name="industry" required>
+              <option value="">Select Industry</option>
+              <option value="aged-care">Aged Care</option>
+              <option value="ndis">NDIS</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="residential-care">Residential Care</option>
+              <option value="child-care">Child Care</option>
+            </select>
+            <label for="jobIndustry">Industry</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit" name="submit">
+            <i class="fas fa-bullhorn"></i>
+            Post Job Opening
+          </button>
+        </form>
+        <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbzIoULg75Dl5WncZmtBzx3D-h2bYgvI9K2kJZ12E_Z8sfQGvli2YgI9f-Il-t27qF6p/exec'
+          const form = document.forms['submit-to-google-sheet']
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+              .then(response => console.log('Success!', response))
+              .catch(error => console.error('Error!', error.message))
+          })
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-content success-modal">
+      <div class="modal-body">
+        <div class="success-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>Success!</h2>
+        <p id="successMessage">
+          Your submission has been received successfully.
+        </p>
+        <button class="btn btn-primary" id="closeSuccessModal">
+          Continue
+        </button>
+      </div>
+    </div>
+  </div>
+ <!--Get in Touch-->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>Ready to start your career journey? Contact us today</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info-grid">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>Phone</h3>
+            <p><a href="tel:+61387643335">+61 3 8764 3335</a></p>
+            <span>Mon-Fri: 9:00 AM - 6:00 PM AEST</span>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p><a href="mailto:info@jobsnvisa.com.au">info@jobsnvisa.com.au</a></p>
+            <span>Response within 24 hours</span>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Locations</h3>
+            <p>Sydney, Melbourne, Brisbane</p>
+            <span>Serving all of Australia</span>
+          </div>
+        </div>
+
+        <!-- <div class="contact-form-section">
+          <div class="contact-form-container">
+            <div class="contact-icon">
+              <i class="fa-solid fa-message"></i>
+            </div>
+            <h3 style="font-size: 25px;">Send us a Message</h3>
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" id="contactName" name="name" required />
+                  <label for="contactName">Full Name</label>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="contactEmail" name="email" required />
+                  <label for="contactEmail">Email Address</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="contactPhone" name="phone" required />
+                <label for="contactPhone">Phone Number</label>
+              </div>
+              <div class="form-group">
+                <select id="contactSubject" name="subject" required>
+                  <option value="">Select Subject</option>
+                  <option value="job-seeker">Job Seeker Inquiry</option>
+                  <option value="employer">Employer Services</option>
+                  <option value="visa-assistance">Visa Assistance</option>
+                  <option value="general">General Inquiry</option>
+                </select>
+                <label for="contactSubject">Subject</label>
+              </div>
+              <div class="form-group">
+                <textarea id="contactMessage" name="message" rows="5" required></textarea>
+                <label for="contactMessage">Message</label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div> -->
+      </div>
+    </div>
+    </div>
+  </section>
+<!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <h3>JobsNVisa</h3>
+            <p>Your gateway to career excellence in Australia</p>
+          </div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61579092253323&sk=about" class="social-link"
+              title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://au.linkedin.com/company/the-jobs-n-visa-pty-ltd?trk=public_post_feed-actor-image"
+              class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@JobsNVisa" class="social-link"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/jobsnvisa/" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.x.com/thejobsnvisa" class="social-link"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+              </svg></a>
+          </div>
+        </div>
+        <!-- This is supposed to be a quick link section - use if requird
+           <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#industries">Industries</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>-->
+        <div class="footer-section">
+          <h4>Industries</h4>
+          <ul class="footer-links">
+            <li><a href="aged-care.html">Aged Care</a></li>
+            <li><a href="ndis.html">NDIS</a></li>
+            <li><a href="healthcare.html">Healthcare</a></li>
+            <li>
+              <a href="residential-care.html">Residential Care</a>
+            </li>
+            <li><a href="child-care.html">Child Care</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="help-center.html">Help Center</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li>
+              <a href="terms-of-service.html">Terms of Service</a>
+            </li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+61387643335">+61 3 8764 3335</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@jobsnvisa.com.au">info@jobsnvisa.com.au</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Sydney, Melbourne, Brisbane</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 JobsNVisa. All rights reserved.</p>
+          <p>Licensed Migration Agent | Registered Employment Services</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+  <script src="darkmode.js"></script>
+  <script src="forms.js"></script>
+</body>
+</body>
+</html>
