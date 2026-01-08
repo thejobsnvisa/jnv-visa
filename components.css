@@ -1072,7 +1072,7 @@
 
 /* book consultation */
 .consultation_section {
-  background-color: #f9f9f9;
+  background-color: var(--bg-primary);
   padding: 4rem 1rem;
 }
 
@@ -1100,7 +1100,7 @@
 
 .consultation_section {
   padding: 15px;
-  background-color: #f9f9f9;
+  background-color: var(--bg-primary);
 }
 .consult_card {
   background: white;
@@ -1816,6 +1816,8 @@ max-width: 1200px; margin: auto; padding: 3rem 1rem;
 .user-card {
   background-color: var(--bg-primary);
   border-radius: 20px;
+  
+  border: #16a34a 2px solid;
   padding: 2rem;
   width: 100%;
   max-width: 480px;
