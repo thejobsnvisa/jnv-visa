@@ -660,7 +660,45 @@
 
 .about-image {
   display: flex;
+  gap: 1.5rem;
+  align-items: center;
   justify-content: center;
+}
+
+.about-image .card {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-primary);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image .card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .about-image {
+    flex-direction: column;
+  }
+  .about-image .card {
+    max-width: 420px;
+    width: 70%;
+  }
+  .about-text h3 {
+    text-align: left;
+  }
 }
 
 .vision-image {
