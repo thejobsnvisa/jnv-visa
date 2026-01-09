@@ -619,6 +619,33 @@
   margin-top: var(--spacing-xl);
 }
 
+/* Vision Section */
+.vision {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--bg-primary);
+}
+
+.vision-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+  text-align: left;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 30px;
+}
+
+.vision-text h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.vision-features {
+  margin-top: var(--spacing-xl);
+}
+
 .feature {
   display: flex;
   align-items: center;
@@ -632,6 +659,11 @@
 }
 
 .about-image {
+  display: flex;
+  justify-content: center;
+}
+
+.vision-image {
   display: flex;
   justify-content: center;
 }
@@ -724,7 +756,7 @@
 /* Why Us Section */
 .why-us {
   padding: var(--spacing-3xl) 0;
-  background-color: var(--bg-primary);
+  background-color: var(--bg-secondary);
 }
 
 .achievements-grid {
@@ -2033,6 +2065,11 @@ max-width: 1200px; margin: auto; padding: 3rem 1rem;
   }
 
   .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .vision-content {
     grid-template-columns: 1fr;
     gap: var(--spacing-2xl);
   }
