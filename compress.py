@@ -68,8 +68,8 @@ def compress_images(
 if __name__ == "__main__":
     # Example usage
     compress_images(
-        input_folder="assets",
-        output_folder="assets",  # set None to overwrite
+        input_folder="",
+        output_folder="",  # set None to overwrite
         quality=65,
         max_width=1920,
         max_height=1080,
