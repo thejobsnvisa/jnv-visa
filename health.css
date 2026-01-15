@@ -42,7 +42,7 @@
     }
 
     .hero h1 span {
-        color: #4CAF50;
+        color: #34D399;
     }
 
     .hero p {
@@ -58,7 +58,7 @@
     .btn {
         margin-top: 26px;
         display: inline-block;
-        background: #4CAF50;
+        background: #34D399;
         color: white;
         padding: 14px 32px;
         border-radius: 10px;
@@ -99,7 +99,7 @@
         padding: 26px;
         padding-bottom: 20px;
         box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-        border: 2px solid #4CAF50;
+        border: 2px solid #34D399;
         transition: background-color 0.3s, box-shadow 0.3s;
     }
 
@@ -139,7 +139,7 @@
     }
 
     .card ul li i {
-        color: #4CAF50;
+        color: #34D399;
     }
 /* HEALTHCARE GRID */
 .health-grid {
@@ -176,7 +176,7 @@ body.dark-mode .health-item {
 
 .health-item i {
     font-size: 34px;
-    color: #4CAF50;
+    color: #34D399;
     margin-bottom: 14px;
 }
 
