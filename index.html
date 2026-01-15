@@ -805,71 +805,100 @@
 
 
   <!-- Post Job Modal -->
-  <div class="modal" id="postJobModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>Post a Job</h2>
-        <button class="modal-close" id="closePostJobModal" title="Close">
-          <i class="fas fa-times"></i>
+<div class="modal" id="postJobModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Recruiter / Employer – Short Inquiry Form</h2>
+      <button class="modal-close" id="closePostJobModal" title="Close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <p>
+        Share your hiring requirements and our team will connect you with
+        suitable candidates.
+      </p>
+
+      <form class="job-form" id="postJobForm">
+
+        <!-- Business Details -->
+        <h4>Business Details</h4>
+
+        <div class="form-group">
+          <input type="text" id="businessName" name="business_name" required>
+          <label for="businessName">Business Name</label>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="contactPerson" name="contact_person" required>
+          <label for="contactPerson">Contact Person Name</label>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="businessEmail" name="email" required>
+          <label for="businessEmail">Email Address</label>
+        </div>
+
+        <div class="form-group">
+          <input type="tel" id="businessPhone" name="phone" required>
+          <label for="businessPhone">Phone Number</label>
+        </div>
+
+        <!-- Job Details -->
+        <h4>Job Details</h4>
+
+        <div class="form-group">
+          <input type="text" id="jobTitle" name="job_title" required>
+          <label for="jobTitle">Job Title</label>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="jobLocation" name="job_location" required>
+          <label for="jobLocation">Job Location</label>
+        </div>
+
+        <div class="form-group">
+          <select id="employmentType" name="employment_type" required>
+            <option value="">Select Employment Type</option>
+            <option value="full-time">Full-time</option>
+            <option value="part-time">Part-time</option>
+            <option value="casual">Casual</option>
+          </select>
+          <label for="employmentType">Employment Type</label>
+        </div>
+
+        <!-- Sponsorship -->
+        <h4>Sponsorship</h4>
+
+        <div class="form-group">
+          <select id="sponsorship" name="sponsorship" required>
+            <option value="">Open to Sponsorship?</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="not-sure">Not Sure</option>
+          </select>
+          <label for="sponsorship">Open to Sponsorship?</label>
+        </div>
+
+        <!-- Message -->
+        <h4>Message</h4>
+
+        <div class="form-group">
+          <textarea id="message" name="message" rows="4"></textarea>
+          <label for="message">Short Message (Optional)</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit">
+          <i class="fas fa-bullhorn"></i>
+          Submit Inquiry
         </button>
-      </div>
-      <div class="modal-body">
-        <p>
-          Find the perfect candidates for your organization through our
-          extensive network
-        </p>
-        <form class="job-form" id="postJobForm" name="submit-to-google-sheet">
-          <div class="form-group">
-            <input type="text" id="companyName" name="company" required />
-            <label for="companyName">Company Name</label>
-          </div>
-          <div class="form-group">
-            <input type="text" id="jobTitle" name="title" required />
-            <label for="jobTitle">Job Title</label>
-          </div>
-          <div class="form-group">
-            <textarea id="jobDescription" name="description" rows="4" required></textarea>
-            <label for="jobDescription">Job Description</label>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <input type="tel" id="companyPhone" name="phone" required />
-              <label for="companyPhone">Contact Number</label>
-            </div>
-            <div class="form-group">
-              <input type="email" id="companyEmail" name="email" required />
-              <label for="companyEmail">Email Address</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <select id="jobIndustry" name="industry" required>
-              <option value="">Select Industry</option>
-              <option value="aged-care">Aged Care</option>
-              <option value="ndis">NDIS</option>
-              <option value="healthcare">Healthcare</option>
-              <option value="residential-care">Residential Care</option>
-              <option value="child-care">Child Care</option>
-            </select>
-            <label for="jobIndustry">Industry</label>
-          </div>
-          <button type="submit" class="btn btn-primary btn-submit" name="submit">
-            <i class="fas fa-bullhorn"></i>
-            Post Job Opening
-          </button>
-        </form>
-        <script>
-          const scriptURL = 'https://script.google.com/macros/s/AKfycbzIoULg75Dl5WncZmtBzx3D-h2bYgvI9K2kJZ12E_Z8sfQGvli2YgI9f-Il-t27qF6p/exec'
-          const form = document.forms['submit-to-google-sheet']
-          form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-              .then(response => console.log('Success!', response))
-              .catch(error => console.error('Error!', error.message))
-          })
-        </script>
-      </div>
+
+      </form>
     </div>
   </div>
+</div>
+
 
   <!-- Success Modal -->
   <div class="modal" id="successModal">
