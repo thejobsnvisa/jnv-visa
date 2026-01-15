@@ -1451,9 +1451,9 @@
   resize: vertical;
   min-height: 100px;
 }
-
 .file-upload {
   position: relative;
+  padding: 10px 20px 20px 10px;
 }
 
 .file-upload input[type="file"] {
