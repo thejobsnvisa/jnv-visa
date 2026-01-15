@@ -102,18 +102,12 @@ async function handleJobSeekerSubmit(e) {
     const formData = new FormData(e.target);
     const submitBtn = e.target.querySelector('.btn-submit');
     
-    // Show loading state
     const originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
     submitBtn.disabled = true;
     
     try {
-        // Prepare email data
         const emailData = {
-            to: 'shreyash@growmore.one',
-            subject: 'New Job Seeker Inquiry - JobsNVisa',
-            type: 'job-seeker',
-            data: {
             name: formData.get('name'),
             email: formData.get('email'),
             phone: formData.get('phone'),
@@ -122,27 +116,19 @@ async function handleJobSeekerSubmit(e) {
             jobType: formData.get('jobType'),
             industry: formData.get('industry'),
             experience: formData.get('experience'),
-            resume: formData.get('resume'),
             message: formData.get('message')
-            }
         };
         
-        // Send email (simulated - in real implementation, this would go to your backend)
-        await sendEmail(emailData);
-        
-        // Close modal and show success
+        await sendToBackend('/api/job-seeker', emailData);
         closeModal(document.getElementById('jobSeekerModal'));
-        showSuccessModal('Thank you for your application! We will review your profile and contact you within 24 hours with suitable opportunities.');
-        
-        // Reset form
+        showSuccessModal('Thank you for your application! We will review your profile and contact you within 24 hours.');
         e.target.reset();
         updateFileInfo('resumeInfo', null);
         
     } catch (error) {
-        console.error('Error submitting job seeker form:', error);
-        alert('There was an error submitting your application. Please try again or contact us directly.');
+        console.error('Error:', error);
+        alert('There was an error submitting your application. Please try again.');
     } finally {
-        // Restore button
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
     }
@@ -150,46 +136,35 @@ async function handleJobSeekerSubmit(e) {
 
 async function handlePostJobSubmit(e) {
     e.preventDefault();
-    
     const formData = new FormData(e.target);
     const submitBtn = e.target.querySelector('.btn-submit');
     
-    // Show loading state
     const originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Posting...';
     submitBtn.disabled = true;
     
     try {
-        // Prepare email data
-        const emailData = {
-            to: 'shreyash@growmore.one',
-            subject: 'New Job Posting - JobsNVisa',
-            type: 'post-job',
-            data: {
-                company: formData.get('company'),
-                title: formData.get('title'),
-                description: formData.get('description'),
-                phone: formData.get('phone'),
-                email: formData.get('email'),
-                industry: formData.get('industry')
-            }
+        const jobData = {
+            business_name: formData.get('business_name'),
+            contact_person: formData.get('contact_person'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            job_title: formData.get('job_title'),
+            job_location: formData.get('job_location'),
+            employment_type: formData.get('employment_type'),
+            sponsorship: formData.get('sponsorship'),
+            message: formData.get('message')
         };
         
-        // Send email (simulated - in real implementation, this would go to your backend)
-        await sendEmail(emailData);
-        
-        // Close modal and show success
+        await sendToBackend('/api/post-job', jobData);
         closeModal(document.getElementById('postJobModal'));
-        showSuccessModal('Your job posting has been submitted successfully! Our team will review it and contact you within 24 hours to discuss the next steps.');
-        
-        // Reset form
+        showSuccessModal('Your job posting has been submitted successfully!');
         e.target.reset();
         
     } catch (error) {
-        console.error('Error submitting job posting:', error);
-        alert('There was an error submitting your job posting. Please try again or contact us directly.');
+        console.error('Error:', error);
+        alert('There was an error submitting your job posting. Please try again.');
     } finally {
-        // Restore button
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
     }
@@ -197,47 +172,46 @@ async function handlePostJobSubmit(e) {
 
 async function handleContactSubmit(e) {
     e.preventDefault();
-    
     const formData = new FormData(e.target);
     const submitBtn = e.target.querySelector('.btn-submit');
     
-    // Show loading state
     const originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
     
     try {
-        // Prepare email data
-        const emailData = {
-            to: 'shreyash@growmore.one',
-            subject: `Contact Form Submission - ${formData.get('subject')} - JobsNVisa`,
-            type: 'contact',
-            data: {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                subject: formData.get('subject'),
-                message: formData.get('message')
-            }
+        const contactData = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            subject: formData.get('subject'),
+            message: formData.get('message')
         };
         
-        // Send email (simulated - in real implementation, this would go to your backend)
-        await sendEmail(emailData);
-        
-        // Show success message
+        await sendToBackend('/api/contact', contactData);
         showSuccessModal('Thank you for your message! We will get back to you within 24 hours.');
-        
-        // Reset form
         e.target.reset();
         
     } catch (error) {
-        console.error('Error submitting contact form:', error);
-        alert('There was an error sending your message. Please try again or contact us directly.');
+        console.error('Error:', error);
+        alert('There was an error sending your message. Please try again.');
     } finally {
-        // Restore button
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
     }
+}
+
+async function sendToBackend(endpoint, data) {
+    const response = await fetch(`https://jnv-visa.vercel.app/{endpoint}`, { // Update with your actual API domain
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+        credentials: 'include',
+        mode: 'cors'
+    });
+    
+    if (!response.ok) throw new Error(`Server error: ${response.status}`);
+    return response.json();
 }
 
 // Email sending function (simulated)
