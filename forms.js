@@ -202,7 +202,8 @@ async function handleContactSubmit(e) {
 }
 
 async function sendToBackend(endpoint, data) {
-    const response = await fetch(`https://jnv-visa.vercel.app/${endpoint}`, { // Update with your actual API domain
+    const baseUrl = window.location.origin; // Use relative URL based on current domain
+    const response = await fetch(`${baseUrl}${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
