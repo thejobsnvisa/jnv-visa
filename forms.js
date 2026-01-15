@@ -110,7 +110,7 @@ async function handleJobSeekerSubmit(e) {
     try {
         // Prepare email data
         const emailData = {
-            to: 'shreyash@growmore.one',
+            to: 'riddhi.u@growmore.one',
             subject: 'New Job Seeker Inquiry - JobsNVisa',
             type: 'job-seeker',
             data: {
