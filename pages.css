@@ -76,7 +76,7 @@
 }
 
 .overview-text h2 {
-  color: var(--text-primary);
+  color: #34D399;
   margin-bottom: var(--spacing-lg);
   text-align: center;
 
@@ -200,7 +200,7 @@
 }
 
 .category-card h3 {
-  color: var(--text-primary);
+  color: #34D399;
   margin-bottom: var(--spacing-md);
 }
 
