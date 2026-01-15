@@ -111,14 +111,19 @@ async function handleJobSeekerSubmit(e) {
         // Prepare email data
         const emailData = {
             to: 'shreyash@growmore.one',
-            subject: 'New Job Seeker Application - JobsNVisa',
+            subject: 'New Job Seeker Inquiry - JobsNVisa',
             type: 'job-seeker',
             data: {
-                name: formData.get('name'),
-                phone: formData.get('phone'),
-                email: formData.get('email'),
-                industry: formData.get('industry'),
-                resume: formData.get('resume')
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            location: formData.get('location'),
+            visaType: formData.get('visaType'),
+            jobType: formData.get('jobType'),
+            industry: formData.get('industry'),
+            experience: formData.get('experience'),
+            resume: formData.get('resume'),
+            message: formData.get('message')
             }
         };
         
