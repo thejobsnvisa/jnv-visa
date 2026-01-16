@@ -973,13 +973,12 @@
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--spacing-3xl);
-  padding-left: 20px;
-  padding-right: 20px;
+  display: flex;
   justify-content: center;
-
+  flex-wrap: wrap;
+  gap: var(--spacing-3xl);
+  padding: 0 1px 0 1px;
+  box-sizing: border-box;
 }
 
 .service-card {
@@ -1015,7 +1014,7 @@
 }
 
 .service-image {
-  height: 120px;
+  height: 96px;
   background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
   display: flex;
   align-items: center;
@@ -1037,7 +1036,9 @@
 }
 
 .service-content p {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 16px;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .service-features {
@@ -1048,6 +1049,7 @@
 .service-features li {
   display: flex;
   align-items: center;
+  font-size: 14px;
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-sm);
   color: var(--text-secondary);
@@ -2222,6 +2224,7 @@ max-width: 1200px; margin: auto; padding: 3rem 1rem;
     .industry-card,
     .service-card {
       margin: 0 var(--spacing-sm);
+      max-width: 280px;
     }
 
     .modal-header,
@@ -2266,6 +2269,7 @@ max-width: 1200px; margin: auto; padding: 3rem 1rem;
   .industry-card,
   .service-card {
     margin: 0 var(--spacing-sm);
+    max-width: 280px;
   }
 
   .modal-header,
